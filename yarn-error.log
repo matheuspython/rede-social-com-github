@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add @typesreact-router-dom
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/Program Files/Python39/Scripts/:/mnt/c/Program Files/Python39/:/mnt/c/Program Files (x86)/Python38-32/Scripts/:/mnt/c/Program Files (x86)/Python38-32/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Java/jdk1.8.0_211/bin:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/OpenJDK/openjdk-8u292-b10/bin:/mnt/c/Program Files/MongoDB/Server/5.0/bin:/mnt/c/Program Files/MongoDB/Tools/100/bin:/mnt/c/ProgramData/chocolatey/lib/Elixir/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/ruivo/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ruivo/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/ruivo/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/ruivo/AppData/Local/Programs/Python/Python39/:/mnt/c/Program Files/Java/jdk-13.0.1/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2/bin:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.1.2/bin:/mnt/c/Users/ruivo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruivo/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/MySQL/MySQL Server 8.0/bin:/mnt/c/Users/ruivo/AppData/Local/Yarn/bin:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/ruivo/AppData/Local/Android/Sdk/platform-tools:/mnt/c/Users/ruivo/AppData/Roaming/npm:/snap/bin
@@ -14,17 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@typesreact-router-dom: Request "https://registry.yarnpkg.com/@typesreact-router-dom" returned a 405
-      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:67038:18)
-      at Request.self.callback (/usr/share/yarn/lib/cli.js:140883:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141855:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141777:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: ENOENT: no such file or directory, copyfile '/home/matheus/.cache/yarn/v6/npm-@babel-core-7.16.7-db990f931f6d40cb9b87a0dc7d2adc749f1dcbcf-integrity/node_modules/@babel/core/lib/index.js' -> '/home/matheus/dbsPage/dbapp/node_modules/@babel/core/lib/index.js'
 
 npm manifest: 
   {
@@ -36,6 +26,7 @@ npm manifest:
       "preview": "vite preview"
     },
     "dependencies": {
+      "@types/react-router-dom": "^5.3.2",
       "@types/styled-components": "^5.1.19",
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
@@ -330,6 +321,11 @@ Lockfile:
       estree-walker "^2.0.1"
       picomatch "^2.2.2"
   
+  "@types/history@*":
+    version "4.7.9"
+    resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.9.tgz#1cfb6d60ef3822c589f18e70f8b12f9a28ce8724"
+    integrity sha512-MUc6zSmU3tEVnkQ78q0peeEjKWPUADMlC/t++2bI8WnAG2tvYRPIgHG8lWkXwqc8MsUF6Z2MOf+Mh5sazOmhiQ==
+  
   "@types/hoist-non-react-statics@*":
     version "3.3.1"
     resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -348,6 +344,23 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
     integrity sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==
     dependencies:
+      "@types/react" "*"
+  
+  "@types/react-router-dom@^5.3.2":
+    version "5.3.2"
+    resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.3.2.tgz#ebd8e145cf056db5c66eb1dac63c72f52e8542ee"
+    integrity sha512-ELEYRUie2czuJzaZ5+ziIp9Hhw+juEw8b7C11YNA4QdLCVbQ3qLi2l4aq8XnlqM7V31LZX8dxUuFUCrzHm6sqQ==
+    dependencies:
+      "@types/history" "*"
+      "@types/react" "*"
+      "@types/react-router" "*"
+  
+  "@types/react-router@*":
+    version "5.1.17"
+    resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-5.1.17.tgz#087091006213b11042f39570e5cd414863693968"
+    integrity sha512-RNSXOyb3VyRs/EOGmjBhhGKTbnN6fHWvy5FNLzWfOWOGjgVUKqJZXfpKzLmgoU8h6Hj8mpALj/mbXQASOb92wQ==
+    dependencies:
+      "@types/history" "*"
       "@types/react" "*"
   
   "@types/react@*", "@types/react@^17.0.33":
